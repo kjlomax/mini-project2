@@ -1,0 +1,27 @@
+* {
+    border: solid black 5px;
+}
+main {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section {
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+    align-items: center;
+    box-sizing: border-box;
+}
+code {
+    display: flex;
+    user-select: all;
+    background-image: linear gradient (
+        rgba(203, 19, 178, 0.8) 0%,
+        rgba(203, 19, 178, 0.8) 100% );
+    box-sizing: border-box;
+}
+.card  {
+    border-width: 5px;
+}
