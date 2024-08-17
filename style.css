@@ -1,10 +1,13 @@
-* {
-    border: solid black 5px;
+:root {
+    --pink: rgba(245, 40, 145, 1) ;
+    --purple: rgba(204, 114, 221, 0.8);
 }
+
 main {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 section {
@@ -12,16 +15,37 @@ section {
     flex-direction: column;
     margin:auto;
     align-items: center;
+    justify-content: center;
     box-sizing: border-box;
 }
-code {
+pre {
     display: flex;
     user-select: all;
-    background-image: linear gradient (
-        rgba(203, 19, 178, 0.8) 0%,
-        rgba(203, 19, 178, 0.8) 100% );
     box-sizing: border-box;
+    background-image: linear-gradient(rgba(245, 40, 145, 0.15), var(--pink) );
+    border-radius: 8px;
+    align-items: center;
 }
-.card  {
-    border-width: 5px;
+.card-header {
+    box-sizing: border-box;
+    border: 5px dotted black;
+    border-radius: 8px;
+    transition:all 0.5s ease-in-out;
+    position: relative;
+    margin-top: -20px;
+}
+
+.card:hover,
+.card:hover .card-header {
+    box-shadow: inset 0px 0px 8px green , 0px 0px 15px var(--pink)  ;
+
+}
+header {
+    text-align: center;
+}
+code {
+    text-align: center;
+    
+}
+.card {
 }
