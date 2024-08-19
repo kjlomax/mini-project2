@@ -1,13 +1,20 @@
 :root {
     --pink: rgba(245, 40, 145, 1) ;
     --purple: rgba(204, 114, 221, 0.8);
+    --babyblue:rgba(177, 212, 243, 0.8);
+}
+* {
+    background-color: var(--babyblue);
+    padding:5px;
+    margin: auto;
 }
 
 main {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display:grid;
     justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+
+    
 }
 
 section {
@@ -17,6 +24,7 @@ section {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    margin-top: 10px;
 }
 pre {
     display: flex;
@@ -30,22 +38,39 @@ pre {
     box-sizing: border-box;
     border: 5px dotted black;
     border-radius: 8px;
-    transition:all 0.5s ease-in-out;
+    transition:all 1s ease-in-out;
     position: relative;
     margin-top: -20px;
 }
 
 .card:hover,
 .card:hover .card-header {
-    box-shadow: inset 0px 0px 8px green , 0px 0px 15px var(--pink)  ;
-
+    box-shadow: inset 0px 0px 8px var(--pink) , 0px 0px 15px var(--pink)  ;
+}
+.card:hover .card-header {
+    width:50%;
+    text-align: center;
 }
 header {
     text-align: center;
+    background-color: var(--babyblue);
 }
 code {
     text-align: center;
+}
+
+ @media  screen and (max-width: 992px) {
+    main {
+        display: grid;
+        width:100%;
+        grid-template-columns: repeat(2, auto);
+    }
     
 }
-.card {
+@media screen and (max-width: 768px) {
+    main {
+        display: grid;
+        width:100%;
+        grid-template-columns: repeat(1, auto);
+    }
 }
